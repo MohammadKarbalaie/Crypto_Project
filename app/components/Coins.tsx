@@ -1,6 +1,8 @@
+import Link from "next/link";
 import React from "react";
 
 interface Coin {
+  id: string;
   market_cap_rank: number;
   image: string;
   symbol: string;
@@ -70,7 +72,10 @@ const Coins: React.FC<CoinsProps> = ({ data }) => {
                 </thead>
                 <tbody className="divide-y divide-gray-300 ">
                   {data.map((coin) => (
-                    <tr key={coin.market_cap_rank} className="hover:bg-gray-100 duration-300 ease-in hover:cursor-pointer">
+                    <tr
+                      key={coin.market_cap_rank}
+                      className="hover:bg-gray-100 duration-300 ease-in hover:cursor-pointer"
+                    >
                       <td className="p-5 whitespace-nowrap text-md leading-6 font-medium text-gray-900 ">
                         {coin.market_cap_rank}
                       </td>
@@ -84,7 +89,9 @@ const Coins: React.FC<CoinsProps> = ({ data }) => {
                         />
                       </td>
                       <td className="p-5 whitespace-nowrap text-md leading-6 font-medium text-gray-900 ">
-                        {coin.symbol.toUpperCase()}
+                        <Link href={`/coin/${coin.id}`}>
+                          {coin.symbol.toUpperCase()}
+                        </Link>
                       </td>
                       <td className="p-5 whitespace-nowrap text-md leading-6 font-medium text-gray-900 ">
                         {coin.current_price.toLocaleString()} $
