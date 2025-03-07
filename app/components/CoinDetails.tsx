@@ -47,12 +47,12 @@ const CoinDetails: React.FC<CoinDetailsProps> = ({ coin }) => {
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 gap-6">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-800">Details of {coin.name}</h2>
+          <h2 className="text-2xl font-bold text-gray-100 py-6 rounded-3xl bg-sky-500">Details of {coin.name}</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 rounded-4xl bg-sky-500 py-6 px-4 text-white">
           <div className="flex flex-col gap-4">
-            <div className="flex items-center">
+            <div className="flex items-center ">
               <img src={coin.image.small} alt={coin.name} className="w-16 h-16 mr-4" />
               <h4 className="text-xl font-semibold">
                 {coin.name} ({coin.symbol.toUpperCase()})
@@ -85,19 +85,19 @@ const CoinDetails: React.FC<CoinDetailsProps> = ({ coin }) => {
             <div className="overflow-x-auto">
               <table className="min-w-full table-auto">
                 <thead>
-                  <tr className="bg-gray-100">
-                    <th className="px-4 py-2 text-left">24h</th>
-                    <th className="px-4 py-2 text-left">7d</th>
-                    <th className="px-4 py-2 text-left">30d</th>
-                    <th className="px-4 py-2 text-left">1y</th>
+                  <tr className="bg-blue-700 border-b-2">
+                    <th className="px-4 py-2 text-center text-white">24h</th>
+                    <th className="px-4 py-2 text-center text-white">7d</th>
+                    <th className="px-4 py-2 text-center text-white">30d</th>
+                    <th className="px-4 py-2 text-center text-white">1y</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td className="border px-4 py-2">{coin.market_data.price_change_percentage_24h.toFixed(2)}%</td>
-                    <td className="border px-4 py-2">{coin.market_data.price_change_percentage_7d.toFixed(2)}%</td>
-                    <td className="border px-4 py-2">{coin.market_data.price_change_percentage_30d.toFixed(2)}%</td>
-                    <td className="border px-4 py-2">{coin.market_data.price_change_percentage_1y.toFixed(2)}%</td>
+                    <td className="px-4 py-2">{coin.market_data.price_change_percentage_24h.toFixed(2)}%</td>
+                    <td className="px-4 py-2">{coin.market_data.price_change_percentage_7d.toFixed(2)}%</td>
+                    <td className="px-4 py-2">{coin.market_data.price_change_percentage_30d.toFixed(2)}%</td>
+                    <td className="px-4 py-2">{coin.market_data.price_change_percentage_1y.toFixed(2)}%</td>
                   </tr>
                 </tbody>
               </table>
@@ -105,7 +105,7 @@ const CoinDetails: React.FC<CoinDetailsProps> = ({ coin }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-sky-500 text-white rounded-4xl py-2">
           <div>
             <h4 className="text-lg font-medium">
               Low 24H:
@@ -132,8 +132,8 @@ const CoinDetails: React.FC<CoinDetailsProps> = ({ coin }) => {
           </div>
         </div>
 
-        <div>
-          <div className="text-gray-700" dangerouslySetInnerHTML={{ __html: coin.description.en }} />
+        <div className='py-[7px] px-6 rounded-4xl bg-sky-500 '>
+          <div className="text-gray-100" dangerouslySetInnerHTML={{ __html: coin.description.en }} />
         </div>
       </div>
     </div>

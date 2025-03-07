@@ -10,7 +10,7 @@ export default function coinLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className="h-[84.6vh]">
+  return <div className="h-screen">
     {children}
     </div>;
 }
