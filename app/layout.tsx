@@ -4,15 +4,10 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-// const vazir = Vazirmatn({
-//   variable: "--font-vazir",
-//   subsets: ["arabic"],
-//   weight:["100","200","300","400","500","600","700","800","900"]
-// });
-
 const poppins = Poppins({
+  subsets: ['latin', 'latin-ext'],
   variable: "--font-poppins",
-  weight:["100","200","300","400","500","600","700","800","900"]
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -30,11 +25,11 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} antialiased`}
       >
-        <Navbar/>
+        <Navbar />
         <div className="">
-        {children}
+          {children}
         </div>
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

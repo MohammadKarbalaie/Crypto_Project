@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-
+import Image from "next/image";
 interface Coin {
   id: string;
   market_cap_rank: number;
@@ -80,11 +80,11 @@ const Coins: React.FC<CoinsProps> = ({ data }) => {
                         {coin.market_cap_rank}
                       </td>
                       <td className="p-5 whitespace-nowrap text-md leading-6 font-medium text-gray-900 ">
-                        <img
+                        <Image
                           src={coin.image}
                           alt={coin.image}
-                          width="40"
-                          height="auto"
+                          width={"40"}
+                          height={"40"}
                           className="mx-auto"
                         />
                       </td>

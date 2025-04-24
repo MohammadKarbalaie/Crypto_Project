@@ -15,11 +15,11 @@ export default function Home() {
     axios(baseUrl)
       .then((response) => {
         setLoading(false);
-        //  console.log(response.data);
         setData(response.data);
       })
       .catch((error) => {
         setError("An error occured");
+        console.log(error); 
       });
   }, []);
   return (

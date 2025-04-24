@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 interface Coins {
   id: string;
   symbol: string;
@@ -53,7 +53,11 @@ const CoinDetails: React.FC<CoinDetailsProps> = ({ coin }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 rounded-4xl bg-sky-500 py-6 px-4 text-white">
           <div className="flex flex-col gap-4">
             <div className="flex items-center ">
-              <img src={coin.image.small} alt={coin.name} className="w-16 h-16 mr-4" />
+              <Image 
+              src={coin.image.small}
+               alt={coin.name} 
+               className="w-16 h-16 mr-4"
+                />
               <h4 className="text-xl font-semibold">
                 {coin.name} ({coin.symbol.toUpperCase()})
               </h4>

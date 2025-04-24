@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { JSX, useState } from "react";
 import { TECollapse } from "tw-elements-react";
 
@@ -15,9 +15,11 @@ export default function AccordionFlush(): JSX.Element {
   return (
     <div className="px-10 py-10">
       <div id="accordionExample">
-        <div className="roundedt-t-2xl border border-l-0
+        <div
+          className="roundedt-t-2xl border border-l-0
          border-r-0 border-t-0 border-neutral-200
-          bg-white">
+          bg-white"
+        >
           <h2 className="mb-0" id="headingOne">
             <button
               className={`${
@@ -63,7 +65,7 @@ export default function AccordionFlush(): JSX.Element {
             className="!mt-0 !rounded-b-none !shadow-none"
           >
             <div className="px-5 py-4">
-              <strong>This is the first item's accordion body.</strong> Lorem
+              <strong>This is the first items accordion body.</strong> Lorem
               ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu
               rhoncus purus, vitae tincidunt nibh. Vivamus elementum egestas
               ligula in varius. Proin ac erat pretium, ultricies leo at, cursus
@@ -74,8 +76,10 @@ export default function AccordionFlush(): JSX.Element {
           </TECollapse>
         </div>
       </div>
-      <div className="rounded-none border border-l-0 border-r-0 border-t-0
-       border-neutral-200 bg-white">
+      <div
+        className="rounded-none border border-l-0 border-r-0 border-t-0
+       border-neutral-200 bg-white"
+      >
         <h2 className="mb-0" id="headingTwo">
           <button
             className={`${
@@ -121,7 +125,7 @@ export default function AccordionFlush(): JSX.Element {
           className="!mt-0 !rounded-b-none !shadow-none"
         >
           <div className="px-5 py-4">
-            <strong>This is the second item's accordion body.</strong> Lorem
+            <strong>This is the second items accordion body.</strong> Lorem
             ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu
             rhoncus purus, vitae tincidunt nibh. Vivamus elementum egestas
             ligula in varius. Proin ac erat pretium, ultricies leo at, cursus
@@ -131,9 +135,11 @@ export default function AccordionFlush(): JSX.Element {
           </div>
         </TECollapse>
       </div>
-      <div className="rounded border rounded-b-2xl border-b-1 border-l-1
+      <div
+        className="rounded border rounded-b-2xl border-b-1 border-l-1
        border-r-1 border-t-0 border-neutral-800 bg-white
-       ">
+       "
+      >
         <h2 className="accordion-header mb-0" id="headingThree">
           <button
             className={`${
@@ -176,13 +182,13 @@ export default function AccordionFlush(): JSX.Element {
           className="!mt-0 !shadow-none"
         >
           <div className="px-5 py-4">
-            <strong>This is the third item's accordion body.</strong> Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu
-            rhoncus purus, vitae tincidunt nibh. Vivamus elementum egestas
-            ligula in varius. Proin ac erat pretium, ultricies leo at, cursus
-            ante. Pellentesque at odio euismod, mattis urna ac, accumsan metus.
-            Nam nisi leo, malesuada vitae pretium et, laoreet at lorem.
-            Curabitur non sollicitudin neque.
+            <strong>This is the third items accordion body.</strong> Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Vestibulum eu rhoncus
+            purus, vitae tincidunt nibh. Vivamus elementum egestas ligula in
+            varius. Proin ac erat pretium, ultricies leo at, cursus ante.
+            Pellentesque at odio euismod, mattis urna ac, accumsan metus. Nam
+            nisi leo, malesuada vitae pretium et, laoreet at lorem. Curabitur
+            non sollicitudin neque.
           </div>
         </TECollapse>
       </div>
